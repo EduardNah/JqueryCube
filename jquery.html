@@ -7,24 +7,55 @@
 	<link rel="stylesheet" href="cube.css">
 	<script type="text/javascript">
 		$(function () {
-			$(document).mousemove(function (e) {
+			$("button").on("click",function () {
+				if ($(this).is("#btn1")){
 				$('#cube').css({
-					'transform':'rotateX('+e.pageY+'deg) rotateY('+e.pageX+'deg)'
+					'transform':'rotateX(180deg) rotateY(180deg) rotateZ(180deg)'
 				});
+				}else if ($(this).is("#btn2")){
+				$('#cube').css({
+					'transform':'rotateY(270deg) rotateX(180deg)   rotateZ(180deg)'
+				});
+				}else if ($(this).is("#btn3")){
+				$('#cube').css({
+					'transform':'rotateY(90deg) rotateX(180deg)   rotateZ(180deg)'
+				});
+				}else if ($(this).is("#btn4")){
+				$('#cube').css({
+					'transform':'rotateY(90deg) rotateX(270deg)   rotateZ(270deg)'
+				});
+				}else if ($(this).is("#btn5")){
+				$('#cube').css({
+					'transform':'rotateY(270deg) rotateX(90deg)   rotateZ(270deg)'
+				});
+				}else if ($(this).is("#btn6")){
+				$('#cube').css({
+					'transform':'rotateY(360deg) rotateX(180deg)   rotateZ(180deg)'
+				});
+				}
 			});
 		});
 	</script>
 </head>
 <body>
-	<div id="wrap">
-	<div id="cube">	
-		<div class="side" id="side1">1</div>
-		<div class="side" id="side2">2</div>
-		<div class="side" id="side3">3</div>
-		<div class="side" id="side4">4</div>
-		<div class="side" id="side5">5</div>
-		<div class="side" id="side6">6</div>
-	</div>
-</div>								
+	<div id="bckg">
+		<p>Search Engines Of The World</p>
+		<button id="btn1">Google</button>
+		<button id="btn2">Bing</button>
+		<button id="btn3">Yahoo</button>
+		<button id="btn4">Aol</button>
+		<button id="btn5">excite</button>
+		<button id="btn6">Ask</button>
+		<div id="wrap">
+			<div id="cube">	
+				<div class="side" id="side1"><a href="https://www.Google.com" target="_blank"><img src="giphy.gif" alt="Google"></a></div>
+				<div class="side" id="side2"><a href="https://www.bing.com" target="_blank"><img src="bing.jpg" alt="Bing"></a></div>
+				<div class="side" id="side3"><a href="https://www.Yahoo.com" target="_blank"><img src="yahoo.jpg" alt="Yahoo"></a></div>
+				<div class="side" id="side4"><a href="https://www.Aol.com" target="_blank"><img src="Aol.png" alt="Aol"></a></div>
+				<div class="side" id="side5"><a href="http://www.excite.com/" target="_blank"><img src="excite.jpg" alt="excite"></a></div>
+				<div class="side" id="side6"><a href="https://www.Ask.com" target="_blank"><img src="Ask.png" alt="Ask"></a></div>
+			</div>
+		</div>
+	</div>								
 </body>
 </html>
